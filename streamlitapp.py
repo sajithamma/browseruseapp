@@ -67,6 +67,9 @@ def main():
                 
             except Exception as e:
                 st.error(f"Error: {str(e)}")
+            finally:
+                # Ensure the browser is closed even if an error occurs
+                asyncio.run(browser.close())
 
 if __name__ == "__main__":
     main()
