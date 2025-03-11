@@ -1,4 +1,4 @@
-# Agentic AI using UseBrowser Agent🌀
+# Agentic AI using Browser-Use Agent🌀
 
 Agentic AI is a **Streamlit-based web application** that leverages [browser-use](https://github.com/browser-use/browser-use) and OpenAI's **GPT-4o** to automate browser tasks using Python. The application allows users to input tasks, executes them using an autonomous browsing agent, and formats the results into a readable markdown format.
 
