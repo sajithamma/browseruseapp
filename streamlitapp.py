@@ -8,6 +8,10 @@ import asyncio
 from dotenv import load_dotenv
 
 load_dotenv()
+st.set_page_config(page_title="Zaper Agentic AI", page_icon="🌀")
+
+with open("styles.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 browser = Browser(
 	config=BrowserConfig(
@@ -44,12 +48,12 @@ async def format_result_to_markdown(raw_result):
     return formatted_result.generations[0][0].text.strip()
 
 def main():
-    st.title("Task Execution with Streamlit")
-    task = st.text_input("Enter the task you want to execute:")
+    st.title("Agentic AI 🌀")
+    task = st.text_area("What task would you like to perform?")
     
-    if st.button("Execute Task") and task:
+    if st.button("Assign Task 🎯") and task:
         result_placeholder = st.empty()
-        with st.spinner("🚀 Executing task..."):
+        with st.spinner("🌐 Executing task..."):
             try:
                 # Get raw result
                 raw_result = asyncio.run(run_agent(task))
